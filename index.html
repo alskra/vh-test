@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <title>VH-Test</title>
@@ -22,7 +22,7 @@
         .col {
             display: flex;
             flex-flow: column;
-            border: 3px solid green;
+            border: 3px solid red;
         }
 
         .col-1 {
@@ -42,7 +42,7 @@
         .item {
             margin-top: auto;
             height: 50px;
-            background: red;
+            background: green;
         }
     </style>
 </head>
@@ -72,8 +72,8 @@
 </div>
 
 <script>
-    document.querySelector('.col-3').style.height = `${document.documentElement.clientHeight}px`;
-    document.querySelector('.col-4').style.height = `${innerHeight}px`;
+    document.querySelector('.col-3').style.height = `${innerHeight}px`;
+    document.querySelector('.col-4').style.height = `${document.documentElement.clientHeight}px`;
 </script>
 </body>
 </html>
