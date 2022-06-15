@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VH-Test</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(5, 20vw);
+            align-items: start;
+        }
+
+        .col {
+            display: flex;
+            flex-flow: column;
+            border: 3px solid green;
+        }
+
+        .col-1 {
+            height: 100vh;
+        }
+
+        .col-2 {
+            height: -webkit-fill-available;
+        }
+
+        .col-5 {
+            position: fixed;
+            width: 20vw;
+            height: 100%;
+        }
+
+        .item {
+            margin-top: auto;
+            height: 50px;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="col col-1">
+        <div class="item"></div>
+    </div>
+
+    <div class="col col-2">
+        <div class="item"></div>
+    </div>
+
+    <div class="col col-3">
+        <div class="item"></div>
+    </div>
+
+    <div class="col col-4">
+        <div class="item"></div>
+    </div>
+
+    <div>
+        <div class="col col-5">
+            <div class="item"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.querySelector('.col-3').style.height = `${document.documentElement.clientHeight}px`;
+    document.querySelector('.col-4').style.height = `${innerHeight}px`;
+</script>
+</body>
+</html>
